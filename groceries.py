@@ -38,8 +38,8 @@ print("THERE ARE " + str(product_count) + " PRODUCTS:")
 print("--------------")
 
 for p in products:
-    price_usd =  "${0:.2f}".format(p["price"])
-    print(".. " + p["name"] + " (" + str(price_usd) + ")")
+    price_usd = " (${0:.2f})".format(p["price"])
+    print("+ " + p["name"] + price_usd)
 
 
 
