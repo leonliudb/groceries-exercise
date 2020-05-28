@@ -31,11 +31,12 @@ products = [
 # TODO: write some Python code here to produce the desired output
 
 
+#Product
 
-
-
-
-
+product_count = len(products)
+print("--------------")
+print("THERE ARE " + str(product_count) + " PRODUCTS:")
+print("--------------")
 
 
 def sort_by_name(any_product):
@@ -44,10 +45,6 @@ def sort_by_name(any_product):
 sorted_products = sorted(products, key=sort_by_name)
 
 
-product_count = len(products)
-print("--------------")
-print("THERE ARE " + str(product_count) + " PRODUCTS:")
-print("--------------")
 
 for p in sorted_products:
     price_usd = " (${0:.2f})".format(p["price"])
@@ -55,32 +52,24 @@ for p in sorted_products:
 
 
 
+#Department
+
+departments = []
+
+for p in products:
+    if p["department"] not in departments:
+        departments.append(p["department"])
+
+department_count = len(departments)
+print("--------------")
+print("THERE ARE " + str(department_count) + " DEPARTMENTS:")
+print("--------------")
+
+for d in departments:
+    print(d)
 
 
 
-##--------------
-##THERE ARE 20 PRODUCTS:
-##--------------
-## + All-Seasons Salt ($4.99)
-## + Chocolate Fudge Layer Cake ($18.50)
-## + Chocolate Sandwich Cookies ($3.50)
-## + Cut Russet Potatoes Steam N' Mash ($4.25)
-## + Dry Nose Oil ($21.99)
-## + Fresh Scent Dishwasher Cleaner ($4.99)
-## + Gluten Free Quinoa Three Cheese & Mushroom Blend ($3.99)
-## + Green Chile Anytime Sauce ($7.99)
-## + Light Strawberry Blueberry Yogurt ($6.50)
-## + Mint Chocolate Flavored Syrup ($4.50)
-## + Overnight Diapers Size 6 ($25.50)
-## + Peach Mango Juice ($1.99)
-## + Pizza For One Suprema Frozen Pizza ($12.50)
-## + Pomegranate Cranberry & Aloe Vera Enrich Drink ($4.25)
-## + Pure Coconut Water With Orange ($3.50)
-## + Rendered Duck Fat ($9.99)
-## + Robust Golden Unsweetened Oolong Tea ($2.49)
-## + Saline Nasal Mist ($16.00)
-## + Smart Ones Classic Favorites Mini Rigatoni With Vodka Cream Sauce ($6.99)
-## + Sparkling Orange Juice & Prickly Pear Beverage ($2.99)
 ##--------------
 ##THERE ARE 10 DEPARTMENTS:
 ##--------------
